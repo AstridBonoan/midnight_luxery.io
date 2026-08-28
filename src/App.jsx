@@ -75,9 +75,9 @@ function App() {
       <header className={`navbar ${scrolled ? 'is-scrolled' : ''}`}>
         <button className="wordmark" onClick={() => goTo('home')} aria-label="NOIR & NEAT home"><span>NOIR</span><i>&</i><span>NEAT</span></button>
         <nav className="desktop-nav"><button onClick={() => goTo('home')}>Home</button><button onClick={() => goTo('services')}>Services</button><button onClick={() => goTo('about')}>About</button><button onClick={() => goTo('faq')}>FAQ</button><button onClick={() => goTo('contact')}>Contact</button></nav>
-        <button className="nav-cta" onClick={() => goTo('booking')}>Book now <ArrowUpRight size={13} /></button>
+        <button className="nav-cta desktop-booking" onClick={() => goTo('booking')}>Book now <ArrowUpRight size={13} /></button>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">{menuOpen ? <X /> : <Menu />}</button>
-        <nav className={`mobile-nav ${menuOpen ? 'open' : ''}`}><button onClick={() => goTo('home')}>Home</button><button onClick={() => goTo('services')}>Services</button><button onClick={() => goTo('about')}>About</button><button onClick={() => goTo('faq')}>FAQ</button><button onClick={() => goTo('contact')}>Contact</button></nav>
+        <nav className={`mobile-nav ${menuOpen ? 'open' : ''}`}><button onClick={() => goTo('home')}>Home</button><button onClick={() => goTo('services')}>Services</button><button onClick={() => goTo('about')}>About</button><button onClick={() => goTo('faq')}>FAQ</button><button onClick={() => goTo('contact')}>Contact</button><button className="nav-cta" onClick={() => goTo('booking')}>Book now <ArrowUpRight size={13} /></button></nav>
       </header>
 
       <main>
