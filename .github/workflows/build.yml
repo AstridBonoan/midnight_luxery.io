@@ -1,10 +1,10 @@
-name: Build
+name: Build and publish GitHub Pages
 
 on:
   push:
-    branches: [main, master]
+    branches: [main]
   pull_request:
-    branches: [main, master]
+    branches: [main]
 
 jobs:
   build:
@@ -21,3 +21,10 @@ jobs:
         run: npm ci
       - name: Build production bundle
         run: npm run build
+      - name: Publish to gh-pages
+        if: github.event_name == 'push'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./docs
