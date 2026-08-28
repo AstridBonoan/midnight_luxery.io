@@ -78,7 +78,7 @@ h2 { font-size:clamp(46px,6vw,84px); line-height:.94; margin-bottom:0; }
 .about-copy h2 { margin-bottom:40px; }
 .about-copy > p { margin-bottom:18px; }
 .about-copy .text-link { margin-top:22px; }
-.booking { background:var(--espresso); }
+.booking { background:var(--black); border-top:1px solid rgba(201,164,92,.16); }
 .steps { border-bottom:1px solid var(--line); display:flex; gap:40px; margin-bottom:50px; padding-bottom:18px; }
 .steps span { color:var(--taupe); font-family:'DM Mono'; font-size:10px; letter-spacing:.1em; text-transform:uppercase; }
 .steps span.active { color:var(--gold); }
