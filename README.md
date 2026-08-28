@@ -26,7 +26,7 @@ npm run build
 npm run preview
 ```
 
-The build output is generated in `dist/`.
+The build output is generated in `docs/` so it can be served directly by GitHub Pages.
 
 ## GitHub Pages
 
@@ -45,10 +45,10 @@ To enable Pages:
 1. Push the repository to GitHub.
 2. Open **Settings > Pages**.
 3. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
-4. Select the `main` branch and the `/ (root)` folder, then click **Save**.
+4. Select the `main` branch and the `/docs` folder, then click **Save**.
 5. GitHub Pages will publish at `https://USERNAME.github.io/midnight_luxery.io/`.
 
-For branch deployment, publish the generated `dist/` contents to the selected branch/folder using your preferred static-site workflow. The included workflow validates every push and pull request with `npm run build`; it does not use Vercel, Netlify, Firebase, or another hosting provider.
+The included workflow validates every push and pull request with `npm run build`; the generated `docs/` folder is committed to the branch for the **Deploy from a branch** setup. It does not use Vercel, Netlify, Firebase, or another hosting provider.
 
 ## Actions
 
