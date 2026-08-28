@@ -1,5 +1,15 @@
 :root { --black:#0d0d0d; --espresso:#1c1a18; --gold:#c9a45c; --ivory:#f3ebdd; --taupe:#8a8175; --line:rgba(243,235,221,.18); }
 .app-shell { overflow:hidden; background:var(--black); }
+main { display:flex; flex-direction:column; }
+#home { order:1; }
+.intro { order:2; }
+.events { order:3; }
+.statement { order:4; }
+.services { order:5; }
+.about { order:6; }
+.faq { order:7; }
+.booking { order:8; }
+.contact { order:9; }
 .navbar { align-items:center; display:flex; height:84px; justify-content:space-between; left:0; padding:0 5vw; position:fixed; right:0; top:0; transition:background .35s, height .35s; z-index:20; }
 .navbar.is-scrolled { background:rgba(13,13,13,.94); height:70px; }
 .wordmark { align-items:center; background:transparent; border:0; color:var(--ivory); display:flex; font-family:'DM Mono',monospace; font-size:14px; gap:7px; letter-spacing:2px; padding:0; }
