@@ -75,7 +75,6 @@ function App() {
       <header className={`navbar ${scrolled ? 'is-scrolled' : ''}`}>
         <button className="wordmark" onClick={() => goTo('home')} aria-label="NOIR & NEAT home"><span>NOIR</span><i>&</i><span>NEAT</span></button>
         <nav className="desktop-nav"><button onClick={() => goTo('home')}>Home</button><button onClick={() => goTo('services')}>Services</button><button onClick={() => goTo('about')}>About</button><button onClick={() => goTo('faq')}>FAQ</button><button onClick={() => goTo('contact')}>Contact</button></nav>
-        <button className="nav-cta" onClick={() => goTo('booking')}>Book now <ArrowUpRight size={15} /></button>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">{menuOpen ? <X /> : <Menu />}</button>
         <nav className={`mobile-nav ${menuOpen ? 'open' : ''}`}><button onClick={() => goTo('home')}>Home</button><button onClick={() => goTo('services')}>Services</button><button onClick={() => goTo('about')}>About</button><button onClick={() => goTo('faq')}>FAQ</button><button onClick={() => goTo('contact')}>Contact</button></nav>
       </header>
@@ -85,7 +84,6 @@ function App() {
           <img className="hero-image" src={images.hero} alt="Cocktail being served at an intimate event" />
           <div className="hero-overlay" />
           <div className="hero-content reveal"><p className="eyebrow">Mobile bartending · Est. 2018</p><h1>Elevate<br /><em>your event.</em></h1><p className="hero-copy">Professional bartending, thoughtfully brought to your door. For the moments worth gathering over.</p><button className="gold-button" onClick={() => goTo('booking')}>Book your event <ArrowUpRight size={17} /></button></div>
-          <div className="hero-meta"><span>Serving the greater metro area<br />& beyond</span><span className="scroll-mark"><i /> Scroll to explore</span></div>
         </section>
 
         <section className="intro section-pad"><div className="intro-mark">NN<span>+</span></div><div><p className="eyebrow">The art of a good gathering</p><h2>A little<br /><em>more memorable.</em></h2></div><div className="intro-copy"><p>We believe the best nights are made of small, considered details. NOIR & NEAT brings an exceptional bar experience directly to your event, so you can focus on being there.</p><button className="text-link" onClick={() => goTo('about')}>Our approach <ArrowDownRight size={16} /></button></div></section>
@@ -102,7 +100,7 @@ function App() {
 
         <section className="faq section-pad" id="faq"><div className="section-top"><div><p className="eyebrow">Questions, answered</p><h2>Before the<br /><em>first pour.</em></h2></div><p className="section-intro">Still curious? We’re happy to talk through the details.</p></div><div className="faq-list">{faqs.map(([question, answer], index) => <div className={`faq-item ${faqOpen === index ? 'open' : ''}`} key={question}><button onClick={() => setFaqOpen(faqOpen === index ? -1 : index)}><span>{String(index + 1).padStart(2, '0')}</span><strong>{question}</strong>{faqOpen === index ? <ChevronDown className="rotate" /> : <ChevronDown />}</button><div className="faq-answer"><p>{answer}</p></div></div>)}</div></section>
 
-        <section className="contact" id="contact"><div className="contact-inner"><p className="eyebrow">Let’s raise a glass</p><h2>Your next<br /><em>great night.</em></h2><button className="gold-button" onClick={() => goTo('booking')}>Start planning <ArrowUpRight size={17} /></button><div className="contact-details"><span>hello@noirandneat.demo</span><span>Serving your city & beyond</span><span>@noirandneat</span></div></div></section>
+        <section className="contact" id="contact"><div className="contact-inner"><p className="eyebrow">Let’s raise a glass</p><h2>Your next<br /><em>great night.</em></h2><div className="contact-details"><span>hello@noirandneat.demo</span><span>Serving your city & beyond</span><span>@noirandneat</span></div></div></section>
       </main>
       <footer><button className="wordmark" onClick={() => goTo('home')}><span>NOIR</span><i>&</i><span>NEAT</span></button><span>© 2026 NOIR & NEAT</span><span>Mobile bartending, thoughtfully made.</span></footer>
     </div>
